@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+<body class="p-3">
+    <form id="setnewpass" method="POST" action='<%=url%>'>
+
+        <div
+            class="w-full p-6 rounded-lg drop-shadow-lg bg-white max-w-sm mx-auto mt-16 flex flex-col justify-center items-center">
+
+            <div class="text-2xl font-medium my-2">Hi <%= name.split(' ')[0] %> !</div>
+            <div class="text-lg font-medium my-2 mb-5">Create Your New Password Here</div>
+
+            <hr class="w-full" />
+
+                <div class="w-full flex flex-col justify-center items-start">
+                    <label for="newpass" class=" w-full my-2 mx-2">New Password</label>
+                    <input class="border-2 w-full my-2 p-2 rounded-lg outline-none" type="password" name="newpass"
+                        id="newpass" required placeholder="New Password a-z A-Z 0-9 # % + _ -" maxlength="20" minlength="3" />
+                </div>
+
+                <div class="w-full flex flex-col justify-center items-start">
+                    <label for="cnfpass" class=" w-full my-2 mx-2">Confirm Password</label>
+                    <input class="border-2 w-full my-2 p-2 rounded-lg outline-none" type="password" name="cnfpass"
+                        id="cnfpass" required placeholder="Confirm Password a-z A-Z 0-9 # % + _ -" maxlength="20" minlength="3" />
+                </div>
+
+                <p class="text-red-500 my-2 text-sm"><%= msg %></p>
+
+                <button type="submit" class=" my-2 float-right tracking-wider
+            px-6
+            py-2.5
+            bg-blue-600
+            text-white
+            font-medium
+            text-xs
+            leading-tight
+            uppercase
+            rounded-lg
+            shadow-md
+            hover:bg-blue-700 hover:shadow-lg
+            focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+            active:bg-blue-800 active:shadow-lg
+            transition
+            duration-150
+            ease-in-out">Create New Password</button>
+
+        </div>
+
+    </form>
+
+
+        <script>
+        </script>
+
+</body>
+
+</html>
